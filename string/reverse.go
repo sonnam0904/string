@@ -1,5 +1,7 @@
 package string
 
+import "strings"
+
 // ReverseRunes returns its argument string reversed rune-wise left to right.
 func ReverseString(s string) string {
 	r := []rune(s)
@@ -7,4 +9,8 @@ func ReverseString(s string) string {
 		r[i], r[j] = r[j], r[i]
 	}
 	return string(r)
+}
+
+func ToLower(s string) string {
+	return strings.ToLower(s)
 }
